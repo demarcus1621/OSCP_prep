@@ -1,0 +1,43 @@
+# Nmap
+Initial Nmap scans alert of port 80 being open
+* Apache 2.4.18 Likely Ubuntu Xenial
+
+# Webapp
+Running Gobuster on webserver listening on port 80 with wordlist
+ - `/usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt`
+
+Found `/dev/` subdirectory, which contains file `phpbash.php`, which
+is a webshell.
+
+The phpbash Github notes that there is a custom upload command. This
+could be a potential vector we can use to upload a reverse shell.
+
+Custom upload command did not work as expected. Wget is installed on
+machine, so I will use wget to upload a reverse shell.
+
+Bash reverse shell upload successful via wget into `/tmp/.hidden`
+
+# Reverse Shell (www-data)
+As www-data the home directory of user Arraxel is readable thus, user flag
+is obtained. To escalate priveleges, I will run the LinPeas tool
+
+# LinPEAS [www-data]
+Found that user `www-data` has sudo priveleges w/ no password as the
+user `scriptmanager`.
+
+Found `/scripts` directory in `/`
+
+# Elevate to scriptmanager
+`sudo -i -u scriptmanager`
+The `/scripts` directory, which was found by linPEAS is owned by scriptmanager
+
+The txt file `test.txt` in the `/scripts` directory is owned by root, but has the
+contents of the output of the python program in the `/scripts` directory, which is
+owned by scriptmanager.
+attempting to append python reverse shell into the python script in `/scripts` dir
+
+# Root reverse shell
+There MUST be a cron job that runs the vulnerable python script regularly, as no
+extra effort was needed after appending malicious code into the vulnerable script
+
+Retrieve root flag

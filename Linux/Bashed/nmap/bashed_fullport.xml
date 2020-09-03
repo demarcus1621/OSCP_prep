@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Wed Sep  2 19:56:08 2020 as: nmap -p- -T4 -oA bashed_fullport 10.10.10.68 -->
+<nmaprun scanner="nmap" args="nmap -p- -T4 -oA bashed_fullport 10.10.10.68" start="1599090968" startstr="Wed Sep  2 19:56:08 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1599090968" endtime="1599090992"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="10.10.10.68" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65534">
+<extrareasons reason="resets" count="65534"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" method="table" conf="3"/></port>
+</ports>
+<times srtt="55371" rttvar="2067" to="100000"/>
+</host>
+<runstats><finished time="1599090992" timestr="Wed Sep  2 19:56:32 2020" elapsed="24.26" summary="Nmap done at Wed Sep  2 19:56:32 2020; 1 IP address (1 host up) scanned in 24.26 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,4 @@
+# Nmap 7.80 scan initiated Wed Sep  2 19:56:08 2020 as: nmap -p- -T4 -oA bashed_fullport 10.10.10.68
+Host: 10.10.10.68 ()	Status: Up
+Host: 10.10.10.68 ()	Ports: 80/open/tcp//http///	Ignored State: closed (65534)
+# Nmap done at Wed Sep  2 19:56:32 2020 -- 1 IP address (1 host up) scanned in 24.26 seconds
