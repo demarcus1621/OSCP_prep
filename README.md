@@ -3,7 +3,7 @@ Collection of notes and writeups for TJ\_Null's
 OSCP list of machines to prepare for the OSCP.
 
 ## TODO:
-* Do writeup for Blue
+* Do writeups for Blue and Legacy
 * Finish as many boxes as possible with as little help before PWK 
 
 ![TJ\_Null List](./sj5beq6ejld21.jpg)
@@ -22,6 +22,7 @@ OSCP list of machines to prepare for the OSCP.
 - [ ] SolidState
 - [ ] Kotarak
 - [ ] Tartarsauce
+- [x] Legacy
 - [x] Blue
 - [ ] Devel
 - [ ] Optimum
