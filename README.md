@@ -3,7 +3,6 @@ Collection of notes and writeups for TJ\_Null's
 OSCP list of machines to prepare for the OSCP.
 
 ## TODO:
-* Write Bashed writeup
 * Finish as many boxes as possible with as little help before PWK 
 
 ![TJ\_Null List](./sj5beq6ejld21.jpg)
