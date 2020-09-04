@@ -1,0 +1,28 @@
+# Initial nmap scans
+Initial nmap scanning shows that the common SMB ports are open (445,139)
+Given that nmap was able to determine that the machine is a Windows 7 box, it may
+be vulnerable to MS17-010(EternalBlue)
+
+Follow-up nmap scanning to check for eternal blue vulnerability via nmap nse
+script determines that box IS vulnerable to EB
+
+# Exploiting EB withough Metasploit
+Challenging myself to exploit machines as much as possible without metasploit
+may have to use msfvenom here and there for shellcode though
+
+started with ExploitDB 42315.py for eternal blue exploit
+copy mysmb.py from github https://raw.githubusercontent.com/worawit/MS17-010/master/mysmb.py
+
+42315 did not find accessible named pipe on initial run
+
+trying 42031.py (also from exploitDB)
+created required shellcode using msfvenom
+
+after attempts to exploit with exploit db payloads failed use github repos
+https://github.com/REPTILEHAUS/Eternal-Blue
+
+Noticed that the github exploit works due to x64 bit shellcode vs x86, which is
+what I was using in the 42315.py attempts. 
+
+The shell granted via exploit is for `NT Authority/System` meaning we already have
+root access
